@@ -1,6 +1,6 @@
 # gatling-tests
 
-## This is a set of instructions for setting up Gatling on Ubuntu to test a series of applications in order to get a banchmark for certain web frameworks.
+## This is a set of instructions for setting up Gatling on Ubuntu with Apache to test a series of applications in order to get a banchmark for certain web frameworks.
 
 =
 ###Install java jdk
