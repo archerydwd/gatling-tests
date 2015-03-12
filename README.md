@@ -85,7 +85,24 @@ rm -rf user-files
 
 Now we need to replace the folder that we just deleted:
 
-git clone 
+```
+git clone https://github.com/archerydwd/gatling-tests.git
+cd gatling-tests
+mv user-files ../
+cd ..
+rm -rf gatling-tests
+```
 
+What we just done:
+- cloned my tests from github
+- changed directory into the tests
+- mv the folder with the actual tests back to replace the folder we deleted
+- changed directory back to gatling
+- deleted the cloned github folder
 
+=
+###Change base url
+=
+
+In the user-files folder there is a folder called simulations containing blog and sakila folders. Inside these folders are tests for Chicago Boss, Flask & Ruby on Rails versions of the blog and sakila apps that we are going to be testing.
 
