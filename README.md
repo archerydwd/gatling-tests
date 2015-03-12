@@ -16,7 +16,7 @@ sudo apt-get install default-jdk
 
 When using the testing tool Tsung, in its configuration file i was able to set the number of users / sessions, but when i ran this it would limit to a set number. On further investigation your OS limits the number of open file handles during normal operation. This needs to be tweaked in order to open many new sockets and achieve heavy load.
 
-To permanently set the soft and hard values for all users of the system to allow for up to 65536 open files. Edit /etc/security/limits.conf and append the following two lines:
+To permanently set the soft and hard values for all users of the system to allow for up to 3000000 open files. Edit /etc/security/limits.conf and append the following two lines:
 
 ```
 *       soft    nofile  3000000
