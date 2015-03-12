@@ -34,9 +34,9 @@ session required pam_limits.so
 ```
 
 into the following files:
-*/etc/pam.d/common-session
-*/etc/pam.d/common-session-noninteractive (if the file exists)
-*/etc/pam.d/sshd (if you access the machine via SSH)
+* /etc/pam.d/common-session
+* /etc/pam.d/common-session-noninteractive (if the file exists)
+* /etc/pam.d/sshd (if you access the machine via SSH)
 
 Also, if accessing the machine via SSH, be sure to have:
 
@@ -45,7 +45,7 @@ UseLogin yes
 ```
 
 set in the file: 
-*/etc/ssh/sshd_config
+* /etc/ssh/sshd_config
 
 For more ports for testing, you may want to do the following:
 
