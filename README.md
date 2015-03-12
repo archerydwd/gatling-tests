@@ -83,7 +83,7 @@ Depending on the testing platform you you want to run on, follow the relevant se
 The reason for the different tests with Apache is that when you are not using Apache you need the port numbers in the base urls, whereas when using Apache the base url will just be localhost.
 
 =
-###Running the Gatling Tests on Apache
+###Getting the Gatling Tests for Apache
 
 Now we need to replace the folder that we just deleted from above:
 
@@ -110,7 +110,7 @@ Chicago Boss blog and sakila apps: <INSERT LINK>
 Flask blog and sakila apps: <INSERT LINK>
 
 =
-###Running the Gatling Tests Without Apache
+###Getting the Gatling Tests for Without Apache
 
 Now we need to replace the folder that we just deleted from above:
 
@@ -139,7 +139,8 @@ First get the relevent application running in development or production mode dep
 * Flask blog app: https://github.com/archerydwd/flask-blog
 * Flask sakila app: https://github.com/archerydwd/flask-sakila
 
-**Running the tests**
+=
+###Running the tests
 
 In your terminal change directory to the Gatling folder and then run:
 
