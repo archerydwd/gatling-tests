@@ -116,10 +116,10 @@ Now we need to replace the folder that we just deleted from above:
 
 ```
 git clone https://github.com/archerydwd/gatling-tests-with-port-numbers.git
-cd gatling-tests
+cd gatling-tests-with-port-numbers
 mv user-files ../
 cd ..
-rm -rf gatling-tests
+rm -rf gatling-tests-with-port-numbers
 ```
 
 What we just done:
