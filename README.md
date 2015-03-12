@@ -132,12 +132,12 @@ What we just done:
 In the user-files directory there is a folder called simulations containing blog and sakila folders. Inside these folders are tests for Chicago Boss, Flask & Ruby on Rails versions of the blog and sakila apps that we are going to be testing.
 
 First get the relevent application running in development or production mode depending on the results you want to replicate.
-*Ruby on Rails blog app: https://github.com/archerydwd/ror-blog
-*Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
-*Chicago Boss blog app: https://github.com/archerydwd/cb-blog
-*Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
-*Flask blog app: https://github.com/archerydwd/flask-blog
-*Flask sakila app: https://github.com/archerydwd/flask-sakila
+* Ruby on Rails blog app: https://github.com/archerydwd/ror-blog
+* Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
+* Chicago Boss blog app: https://github.com/archerydwd/cb-blog
+* Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
+* Flask blog app: https://github.com/archerydwd/flask-blog
+* Flask sakila app: https://github.com/archerydwd/flask-sakila
 
 **Running the tests**
 
