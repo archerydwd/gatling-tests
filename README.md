@@ -1,6 +1,6 @@
 # gatling-tests
 
-## This is a set of instructions for setting up Gatling on Ubuntu with Apache to test a series of applications in order to get a banchmark for certain web frameworks.
+## This is a set of instructions for setting up Gatling on Ubuntu to test a series of applications in order to get a banchmark for certain web frameworks.
 
 =
 ###Install java jdk
@@ -83,7 +83,15 @@ Then change directory to the Gatling folder and delete the user-files folder:
 rm -rf user-files
 ```
 
-Now we need to replace the folder that we just deleted:
+Depending on the testing platform you you want to run on, follow the relevant section below, eg: Apache or without Apache.
+
+The reason for the different tests with Apache is that when you are not using Apache you need the port numbers in the base urls, whereas when using Apache the base url will just be localhost.
+
+=
+###Running the Gatling Tests on Apache
+=
+
+Now we need to replace the folder that we just deleted from above:
 
 ```
 git clone https://github.com/archerydwd/gatling-tests.git
@@ -100,5 +108,90 @@ What we just done:
 - changed directory back to gatling
 - deleted the cloned github folder
 
-In the user-files folder there is a folder called simulations containing blog and sakila folders. Inside these folders are tests for Chicago Boss, Flask & Ruby on Rails versions of the blog and sakila apps that we are going to be testing.
+In the user-files directory there is a folder called simulations containing blog and sakila folders. Inside these folders are tests for Chicago Boss, Flask & Ruby on Rails versions of the blog and sakila apps that we are going to be testing.
+
+First get the relevent application running on Apache from the other github repos I have available here:
+Ruby on Rails blog and sakila apps: <INSERT LINK>
+Chicago Boss blog and sakila apps: <INSERT LINK>
+Flask blog and sakila apps: <INSERT LINK>
+
+=
+###Running the Gatling Tests Without Apache
+=
+
+Now we need to replace the folder that we just deleted from above:
+
+```
+git clone https://github.com/archerydwd/gatling-tests-with-port-numbers.git
+cd gatling-tests
+mv user-files ../
+cd ..
+rm -rf gatling-tests
+```
+
+What we just done:
+- cloned my tests from github
+- changed directory into the tests
+- mv the folder with the actual tests back to replace the folder we deleted
+- changed directory back to gatling
+- deleted the cloned github folder
+
+In the user-files directory there is a folder called simulations containing blog and sakila folders. Inside these folders are tests for Chicago Boss, Flask & Ruby on Rails versions of the blog and sakila apps that we are going to be testing.
+
+First get the relevent application running in development or production mode depending on the results you want to replicate.
+Ruby on Rails blog app: https://github.com/archerydwd/ror-blog
+Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
+Chicago Boss blog app: https://github.com/archerydwd/cb-blog
+Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
+Flask blog app: https://github.com/archerydwd/flask-blog
+Flask sakila app: https://github.com/archerydwd/flask-sakila
+
+**Running the tests**
+
+In your terminal change directory to the Gatling folder and then run:
+
+```
+./$GATLING_HOME/bin/gatling.sh
+```
+
+This will produce a menu for you to pick from, which will be populated with the list of tests in our user-files/simulations folder.
+Pick one from the menu by entering the number associated with the test and hit enter, then hit enter again twice to select the defaults. Once it’s finished it will produce a file in the results folder and provide a path to it. Then I created the file structure and moved the results from the tests into their relevant folders:
+
+If not using Apache:
+
+results/
+  blog/
+    development/
+      iteration1/
+      iteration2/
+      iteration3/
+    production/
+      iteration1/
+      iteration2/
+      iteration3/
+  sakila/
+    development/
+      iteration1/
+      iteration2/
+      iteration3/
+    production/
+      iteration1/
+      iteration2/
+      iteration3/
+      
+If using Apache:
+
+results/
+  blog/
+    iteration1/
+    iteration2/
+    iteration3/
+  sakila/
+    iteration1/
+    iteration2/
+    iteration3/
+
+
+
+
 
