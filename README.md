@@ -100,9 +100,5 @@ What we just done:
 - changed directory back to gatling
 - deleted the cloned github folder
 
-=
-###Change base urls
-=
-
 In the user-files folder there is a folder called simulations containing blog and sakila folders. Inside these folders are tests for Chicago Boss, Flask & Ruby on Rails versions of the blog and sakila apps that we are going to be testing.
 
