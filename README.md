@@ -34,9 +34,9 @@ session required pam_limits.so
 ```
 
 into the following files:
->/etc/pam.d/common-session
->/etc/pam.d/common-session-noninteractive (if the file exists)
->/etc/pam.d/sshd (if you access the machine via SSH)
+*/etc/pam.d/common-session
+*/etc/pam.d/common-session-noninteractive (if the file exists)
+*/etc/pam.d/sshd (if you access the machine via SSH)
 
 Also, if accessing the machine via SSH, be sure to have:
 
@@ -45,7 +45,7 @@ UseLogin yes
 ```
 
 set in the file: 
->/etc/ssh/sshd_config
+*/etc/ssh/sshd_config
 
 For more ports for testing, you may want to do the following:
 
@@ -96,11 +96,11 @@ rm -rf gatling-tests
 ```
 
 What we just done:
-- cloned my tests from github
-- changed directory into the tests
-- mv the folder with the actual tests back to replace the folder we deleted
-- changed directory back to gatling
-- deleted the cloned github folder
+* cloned my tests from github
+* changed directory into the tests
+* mv the folder with the actual tests back to replace the folder we deleted
+* changed directory back to gatling
+* deleted the cloned github folder
 
 In the user-files directory there is a folder called simulations containing blog and sakila folders. Inside these folders are tests for Chicago Boss, Flask & Ruby on Rails versions of the blog and sakila apps that we are going to be testing.
 
@@ -123,21 +123,21 @@ rm -rf gatling-tests
 ```
 
 What we just done:
-- cloned my tests from github
-- changed directory into the tests
-- mv the folder with the actual tests back to replace the folder we deleted
-- changed directory back to gatling
-- deleted the cloned github folder
+* cloned my tests from github
+* changed directory into the tests
+* mv the folder with the actual tests back to replace the folder we deleted
+* changed directory back to gatling
+* deleted the cloned github folder
 
 In the user-files directory there is a folder called simulations containing blog and sakila folders. Inside these folders are tests for Chicago Boss, Flask & Ruby on Rails versions of the blog and sakila apps that we are going to be testing.
 
 First get the relevent application running in development or production mode depending on the results you want to replicate.
-Ruby on Rails blog app: https://github.com/archerydwd/ror-blog
-Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
-Chicago Boss blog app: https://github.com/archerydwd/cb-blog
-Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
-Flask blog app: https://github.com/archerydwd/flask-blog
-Flask sakila app: https://github.com/archerydwd/flask-sakila
+*Ruby on Rails blog app: https://github.com/archerydwd/ror-blog
+*Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
+*Chicago Boss blog app: https://github.com/archerydwd/cb-blog
+*Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
+*Flask blog app: https://github.com/archerydwd/flask-blog
+*Flask sakila app: https://github.com/archerydwd/flask-sakila
 
 **Running the tests**
 
