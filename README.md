@@ -152,39 +152,41 @@ Pick one from the menu by entering the number associated with the test and hit e
 
 If not using Apache:
 
-.
-+-- results/
-|   +-- blog/
-  |   +-- development/
-   |   +-- iteration1/
-   |   +-- iteration2/
-   |   +-- iteration3/
-  |   +-- production/
-   |   +-- iteration1/
-   |   +-- iteration2/
-   |   +-- iteration3/
- |   +-- sakila/
-  |   +-- development/
-   |   +-- iteration1/
-   |   +-- iteration2/
-   |   +-- iteration3/
-  |   +-- production/
-   |   +-- iteration1/
-   |   +-- iteration2/
-   |   +-- iteration3/
-       
- If using Apache:
-. 
-+-- results/
-   blog/
-     iteration1/
-     iteration2/
-     iteration3/
-   sakila/
-     iteration1/
-     iteration2/
-     iteration3/
+```
+results/
+|___blog/
+|   |___development/
+|   |   |   iteration1/
+|   |   |   iteration2/
+|   |   |   iteration3/
+|   |___production/
+|   |   |   iteration1/
+|   |   |   iteration2/
+|   |   |   iteration3/
+|___sakila/
+    |___development/
+    |   |   iteration1/
+    |   |   iteration2/
+    |   |   iteration3/
+    |___production/
+        |   iteration1/
+        |   iteration2/
+        |   iteration3/
+```
 
+ If using Apache:
+ 
+```
+results/
+|___blog/
+|   |   iteration1/
+|   |   iteration2/
+|   |   iteration3/
+|___sakila/
+    |   iteration1/
+    |   iteration2/
+    |   iteration3/
+```
 
 
 
