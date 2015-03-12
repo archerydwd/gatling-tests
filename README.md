@@ -4,7 +4,6 @@
 
 =
 ###Install java jdk
-=
 
 ```
 sudo apt-get install default-jdk
@@ -12,7 +11,6 @@ sudo apt-get install default-jdk
 
 =
 ###Changing The Limit Your OS Places On Virtual Users
-=
 
 When using the testing tool Tsung, in its configuration file i was able to set the number of users / sessions, but when i ran this it would limit to a set number. On further investigation your OS limits the number of open file handles during normal operation. This needs to be tweaked in order to open many new sockets and achieve heavy load.
 
@@ -36,9 +34,9 @@ session required pam_limits.so
 ```
 
 into the following files:
-/etc/pam.d/common-session
-/etc/pam.d/common-session-noninteractive (if the file exists)
-/etc/pam.d/sshd (if you access the machine via SSH)
+>/etc/pam.d/common-session
+>/etc/pam.d/common-session-noninteractive (if the file exists)
+>/etc/pam.d/sshd (if you access the machine via SSH)
 
 Also, if accessing the machine via SSH, be sure to have:
 
@@ -47,7 +45,7 @@ UseLogin yes
 ```
 
 set in the file: 
-/etc/ssh/sshd_config
+>/etc/ssh/sshd_config
 
 For more ports for testing, you may want to do the following:
 
@@ -62,10 +60,8 @@ echo 3000000 | sudo tee /proc/sys/fs/nr_open
 echo 3000000 | sudo tee /proc/sys/fs/file-max
 ```
 
-
 =
 ###Install Git
-=
 
 ```
 sudo apt-get install git
@@ -73,7 +69,6 @@ sudo apt-get install git
 
 =
 ###Install Gatling
-=
 
 Download the zip of Gatling from their website then unzip it to the Documents folder. http://gatling.io/#/download
 
@@ -89,7 +84,6 @@ The reason for the different tests with Apache is that when you are not using Ap
 
 =
 ###Running the Gatling Tests on Apache
-=
 
 Now we need to replace the folder that we just deleted from above:
 
@@ -117,7 +111,6 @@ Flask blog and sakila apps: <INSERT LINK>
 
 =
 ###Running the Gatling Tests Without Apache
-=
 
 Now we need to replace the folder that we just deleted from above:
 
