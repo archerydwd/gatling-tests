@@ -152,37 +152,37 @@ Pick one from the menu by entering the number associated with the test and hit e
 
 If not using Apache:
 
-results/
-  blog/
-    development/
-      iteration1/
-      iteration2/
-      iteration3/
-    production/
-      iteration1/
-      iteration2/
-      iteration3/
-  sakila/
-    development/
-      iteration1/
-      iteration2/
-      iteration3/
-    production/
-      iteration1/
-      iteration2/
-      iteration3/
+*results/
+  *blog/
+    *development/
+      *iteration1/
+      *iteration2/
+      *iteration3/
+    *production/
+      *iteration1/
+      *iteration2/
+      *iteration3/
+  *sakila/
+    *development/
+      *iteration1/
+      *iteration2/
+      *iteration3/
+    *production/
+      *iteration1/
+      *iteration2/
+      *iteration3/
       
 If using Apache:
 
-results/
-  blog/
-    iteration1/
-    iteration2/
-    iteration3/
-  sakila/
-    iteration1/
-    iteration2/
-    iteration3/
+*results/
+  *blog/
+    *iteration1/
+    *iteration2/
+    *iteration3/
+  *sakila/
+    *iteration1/
+    *iteration2/
+    *iteration3/
 
 
 
