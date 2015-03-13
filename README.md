@@ -136,7 +136,7 @@ First get the relevent application running in development or production mode dep
 * Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
 * Chicago Boss blog app: https://github.com/archerydwd/cb-blog
 * Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
-* Flask blog app: https://github.com/archerydwd/flask-blog
+* Flask blog app: https://github.com/archerydwd/flask_blog
 * Flask sakila app: https://github.com/archerydwd/flask-sakila
 
 =
