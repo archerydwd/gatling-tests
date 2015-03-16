@@ -1,16 +1,41 @@
 # gatling-tests
 
-## This is a set of instructions for setting up Gatling on Ubuntu to test a series of applications in order to get a banchmark for certain web frameworks.
+## This is a set of instructions for setting up Gatling on one laptop to test a series of applications through a wired network on another laptop in order to get a banchmark for certain web frameworks.
 
 =
-###Install java jdk
+###Required Equipment
+* Router
+* 2 network cables
+* 2 laptops
+
+=
+###Install java jdk on the testing laptop
+
+**On Linux**
 
 ```
 sudo apt-get install default-jdk
 ```
 
+**On OSX**
+
+Go to the following link, accept the licence and download the mac version and install.
+https://jdk7.java.net/download.html
+
 =
 ###Changing The Limit Your OS Places On Virtual Users
+
+**ON OSX**
+
+Open a terminal and input the following commands to set the new limit to 3000000 files.
+
+```
+$ sudo sysctl -w kern.maxfilesperproc=3000000
+$ sudo sysctl -w kern.maxfiles=3000000
+$ sudo sysctl -w net.inet.ip.portrange.first=1024
+```
+
+**On Linux**
 
 When using the testing tool Tsung, in its configuration file i was able to set the number of users / sessions, but when i ran this it would limit to a set number. On further investigation your OS limits the number of open file handles during normal operation. This needs to be tweaked in order to open many new sockets and achieve heavy load.
 
@@ -63,9 +88,15 @@ echo 3000000 | sudo tee /proc/sys/fs/file-max
 =
 ###Install Git
 
+**on Linux**
+
 ```
 sudo apt-get install git
 ```
+
+**On OSX**
+
+Download the file here: http://git-scm.com/download/mac and follow the instructions.
 
 =
 ###Install Gatling
@@ -80,7 +111,15 @@ rm -rf user-files
 
 Depending on the testing platform you you want to run on, follow the relevant section below, eg: Apache or without Apache.
 
-The reason for the different tests with Apache is that when you are not using Apache you need the port numbers in the base urls, whereas when using Apache the base url will just be localhost.
+The reason for the different tests with Apache is that when you are not using Apache you need the port numbers in the base urls, whereas when using Apache the base url will just be the ip address of the second laptop.
+
+First get the relevent application running in development or production mode depending on the results you want to replicate.
+* Ruby on Rails blog app: https://github.com/archerydwd/ror-blog
+* Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
+* Chicago Boss blog app: https://github.com/archerydwd/cb_blog
+* Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
+* Flask blog app: https://github.com/archerydwd/flask_blog
+* Flask sakila app: https://github.com/archerydwd/flask_sakila
 
 =
 ###Getting the Gatling Tests for Apache
@@ -104,11 +143,6 @@ What we just done:
 
 In the user-files directory there is a folder called simulations containing blog and sakila folders. Inside these folders are tests for Chicago Boss, Flask & Ruby on Rails versions of the blog and sakila apps that we are going to be testing.
 
-First get the relevent application running on Apache from the other github repos I have available here:
-Ruby on Rails blog and sakila apps: <INSERT LINK>
-Chicago Boss blog and sakila apps: <INSERT LINK>
-Flask blog and sakila apps: <INSERT LINK>
-
 =
 ###Getting the Gatling Tests for Without Apache
 
@@ -131,16 +165,10 @@ What we just done:
 
 In the user-files directory there is a folder called simulations containing blog and sakila folders. Inside these folders are tests for Chicago Boss, Flask & Ruby on Rails versions of the blog and sakila apps that we are going to be testing.
 
-First get the relevent application running in development or production mode depending on the results you want to replicate.
-* Ruby on Rails blog app: https://github.com/archerydwd/ror-blog
-* Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
-* Chicago Boss blog app: https://github.com/archerydwd/cb_blog
-* Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
-* Flask blog app: https://github.com/archerydwd/flask_blog
-* Flask sakila app: https://github.com/archerydwd/flask_sakila
-
 =
 ###Running the tests
+
+If you are using the Apache set up, then you firstly need to wire up the laptops to the router and turn off the wifi on both laptops. 
 
 In your terminal change directory to the Gatling folder and then run:
 
