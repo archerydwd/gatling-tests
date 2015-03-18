@@ -116,10 +116,14 @@ The reason for the different tests with Apache is that when you are not using Ap
 First get the relevent application running in development or production mode depending on the results you want to replicate.
 * Ruby on Rails blog app: https://github.com/archerydwd/ror-blog
 * Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
-* Chicago Boss blog app: https://github.com/archerydwd/cb_blog
-* Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
 * Flask blog app: https://github.com/archerydwd/flask_blog
 * Flask sakila app: https://github.com/archerydwd/flask_sakila
+
+Chicago boss ships with their own high performance web server, it does not require Apache, Nginx, haproxy. 
+Therefore I decided to test Chicago Boss as it comes with its own web server. As incorporating apache would slow it down unlike rails and flask.
+
+* Chicago Boss blog app: https://github.com/archerydwd/cb_blog
+* Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
 
 =
 ###Getting the Gatling Tests for Apache
