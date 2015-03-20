@@ -171,6 +171,8 @@ In the user-files directory there is a folder called simulations containing blog
 =
 ###Running the tests
 
+**Testing using 2 laptops**
+
 If you are using the Apache set up, then you firstly need to wire up the laptops to the router and turn off the wifi on both laptops. On each laptop run the command ifconfig to determine that laptops ip address, for instance my laptop 1 = 192.168.1.3 and laptop 2 = 192.168.1.2.. You can now open a terminal on laptop 1 and type:
 
 ```
@@ -179,7 +181,11 @@ ping 192.168.1.2
 
 If you start getting responses back then we are good to go.
 
+**Change test base url**
+
 In the user-files/simulations/ directory, open the one that you wish to use, say for this we will use: Flask_blog_1000_users.scala and change the base-url from 127.0.0.1:5000 to 192.168.1.2 Note we are not using a port number as this is an apache test. Save the file.
+
+**Enable Virtual Host**
 
 Enable the virtual host (site) on laptop 2:
 
@@ -188,7 +194,8 @@ sudo a2ensite flask_blog.conf
 sudo etc/init.d/apache2 reload
 ```
 
-**When testing Chicago Boss**
+**Testing Chicago Boss**
+
 We are not using the Apache set up for Chicago Boss, as stated above. In this case we need change directory on laptop 2 to the cb_blog/cb_sakila application and run the following command to start the server in production mode:
 
 ```
@@ -212,6 +219,7 @@ In your terminal on laptop 1, change directory to the Gatling folder and then ru
 This will produce a menu for you to pick from, which will be populated with the list of tests in our user-files/simulations folder.
 Pick one from the menu by entering the number associated with the test and hit enter, then hit enter again twice to select the defaults.
 
+**Store The Results**
 
 Once the test is finished it will produce a file in the results folder and provide a path to it. Then I created the file structure and moved the results from the tests into their relevant folders:
 
