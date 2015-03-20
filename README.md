@@ -1,7 +1,6 @@
 # gatling-tests
 
-## This is a set of instructions for setting up Gatling on one laptop to test a series of applications through a wired network on another laptop in order to get a banchmark for certain web frameworks.
-
+## This is a set of instructions for testing apps I have built to compare web frameworks.
 =
 ###Required Equipment
 * Router
