@@ -2,13 +2,13 @@
 
 ## This is a set of instructions for testing apps I have built to compare web frameworks.
 =
-###Required Equipment
+###Required Equipment if testing with Apache
 * Router
 * 2 network cables
 * 2 laptops
 
 =
-###Install java jdk on the testing laptop
+###Install java jdk on the laptop running the tests
 
 **On Linux**
 
@@ -22,7 +22,7 @@ Go to the following link, accept the licence and download the mac version and in
 https://jdk7.java.net/download.html
 
 =
-###Changing The Limit Your OS Places On Virtual Users
+###Changing The Limit Your OS Places On Virtual Users on the laptop running the tests
 
 **ON OSX**
 
@@ -85,7 +85,7 @@ echo 3000000 | sudo tee /proc/sys/fs/file-max
 ```
 
 =
-###Install Git
+###Install Git on the laptop being tested
 
 **on Linux**
 
@@ -98,7 +98,7 @@ sudo apt-get install git
 Download the file here: http://git-scm.com/download/mac and follow the instructions.
 
 =
-###Install Gatling
+###Install Gatling on the laptop running the tests
 
 Download the zip of Gatling from their website then unzip it to the Documents folder. http://gatling.io/#/download
 
