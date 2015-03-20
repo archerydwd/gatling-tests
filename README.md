@@ -188,15 +188,32 @@ sudo a2ensite flask_blog.conf
 sudo etc/init.d/apache2 reload
 ```
 
-In your terminal change directory to the Gatling folder and then run:
+**When testing Chicago Boss**
+We are not using the Apache set up for Chicago Boss, as stated above. In this case we need change directory on laptop 2 to the cb_blog/cb_sakila application and run the following command to start the server in production mode:
+
+```
+./init.sh start
+```
+
+To stop the server when finished:
+
+```
+./init.sh stop
+```
+
+**Run the tests**
+
+In your terminal on laptop 1, change directory to the Gatling folder and then run:
 
 ```
 ./$GATLING_HOME/bin/gatling.sh
 ```
 
 This will produce a menu for you to pick from, which will be populated with the list of tests in our user-files/simulations folder.
-Pick one from the menu by entering the number associated with the test and hit enter, then hit enter again twice to select the defaults. 
-Once it’s finished it will produce a file in the results folder and provide a path to it. Then I created the file structure and moved the results from the tests into their relevant folders:
+Pick one from the menu by entering the number associated with the test and hit enter, then hit enter again twice to select the defaults.
+
+
+Once the test is finished it will produce a file in the results folder and provide a path to it. Then I created the file structure and moved the results from the tests into their relevant folders:
 
 If not using Apache:
 
