@@ -1,7 +1,7 @@
 # gatling-tests
 
 ## This is a set of instructions for testing apps I have built to compare web frameworks.
-=
+
 ###Required Equipment if testing with Apache
 * Router
 * 2 network cables
