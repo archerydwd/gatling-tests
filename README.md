@@ -8,6 +8,25 @@
 * 2 laptops
 
 =
+###Build the applications
+
+First get the relevent application running. 
+In the case of running with Apache follow these guides:
+* Ruby on Rails with Apache: https://github.com/archerydwd/Apache-Rails-Passenger-Ubuntu
+* Flask with Apache: https://github.com/archerydwd/Apache-Flask-Ubuntu
+
+Or if you just wish to test the applications in their own development or production modes, follow these guides:
+* Ruby on Rails blog app: https://github.com/archerydwd/ror-blog
+* Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
+* Flask blog app: https://github.com/archerydwd/flask_blog
+* Flask sakila app: https://github.com/archerydwd/flask_sakila
+
+Chicago boss ships with it's own high performance web server, it does not require Apache, Nginx, haproxy. 
+Therefore we will test Chicago Boss on its own web server as incorporating apache would slow it down unlike with rails and flask. Therefore for testing Chicago Boss in development mode or in production server mode, please follow these guides:
+* Chicago Boss blog app: https://github.com/archerydwd/cb_blog
+* Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
+
+=
 ###Install java jdk on the laptop running the tests
 
 **On Linux**
@@ -111,18 +130,6 @@ rm -rf user-files
 Depending on the testing platform you you want to run on, follow the relevant section below, eg: Apache or without Apache.
 
 The reason for the different tests with Apache is that when you are not using Apache you need the port numbers in the base urls, whereas when using Apache the base url will just be the ip address of the second laptop.
-
-First get the relevent application running in development or production mode depending on the results you want to replicate.
-* Ruby on Rails blog app: https://github.com/archerydwd/ror-blog
-* Ruby on Rails sakila app: https://github.com/archerydwd/ror_sakila
-* Flask blog app: https://github.com/archerydwd/flask_blog
-* Flask sakila app: https://github.com/archerydwd/flask_sakila
-
-Chicago boss ships with their own high performance web server, it does not require Apache, Nginx, haproxy. 
-Therefore I decided to test Chicago Boss as it comes with its own web server. As incorporating apache would slow it down unlike rails and flask.
-
-* Chicago Boss blog app: https://github.com/archerydwd/cb_blog
-* Chicago Boss sakila app: https://github.com/archerydwd/cb_sakila
 
 =
 ###Getting the Gatling Tests for Apache
